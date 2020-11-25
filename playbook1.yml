@@ -1,0 +1,12 @@
+---
+- name: ADDING USER KingKhan
+  hosts: all
+  tasks:
+    - name: ADDING KingKhan
+      user:
+        name: kingkhan
+        state: present
+    - name: RESTARTING SSHD
+      service:
+        name: sshd
+        state: restarted
